@@ -120,3 +120,4 @@ function reset(e) {
 form.addEventListener('submit', (e) => handleSubmit(e));
 clearBtn.addEventListener('click', (e) => reset(e));
 init();
+calculateColor(CO2);
