@@ -87,6 +87,12 @@ function init() {
     const storedApiKey = localStorage.getItem('.apiKey');
     const storedRegion = localStorage.getItem('regionname');
     //set icons to be generic green
+    chrome.runtime.sendMessage({
+        action: 'updateIcon',
+            value: {
+                color: 'green',
+            },
+    });
     //todo
     if (storedApiKey === null || storedRegion === null) {
         //if we dont have the keys ,show the form
