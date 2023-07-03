@@ -56,6 +56,8 @@ async function displayCarbonUsage(apiKey, region) {
                     response.data.data.fossilFuelPercentage.toFixed(2) +
                     '% (percentage of fossil fuels used to generate electricity)';
                 results.style.display = 'block';
+
+                calculateColor(CO2);
             });
     } catch (error) {
         console.log(error);
@@ -120,4 +122,3 @@ function reset(e) {
 form.addEventListener('submit', (e) => handleSubmit(e));
 clearBtn.addEventListener('click', (e) => reset(e));
 init();
-calculateColor(CO2);
